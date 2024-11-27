@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.chart-container {
+  flex: 1 1 calc(33% - 20px);
+  min-width: 300px;
+  max-width: 400px;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 0 0 10px;
+}

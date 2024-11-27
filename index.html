@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StarRocket Real-Time Graphs</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .data-display {
+      margin: 20px auto;
+      width: 90%;
+      padding: 15px;
+      background: #f4f4f4;
+      border-radius: 10px;
+      text-align: left;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .data-display .other-data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    iframe {
+      width: 300px;
+      height: 250px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Graphs</h1>
+  <div id="charts-container">
+    <div class="speed-acceleration">
+      <div class="chart-container">
+        <canvas id="speedTimeChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="accelerationTimeChart"></canvas>
+      </div>
+    </div>
+    <div class="temperature-humidity">
+      <div class="chart-container">
+        <canvas id="temperatureTimeChart"></canvas>    
+      </div>
+      <div class="chart-container">
+        <canvas id="humidityTimeChart"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="data-display">
+    <div class="gps-data">
+      <p><strong>GPS Coordinates:</strong> <span id="gps-coordinates">36.708050, 2.913100</span></p>
+      <iframe id="gps-map" src="https://maps.google.com/maps?q=36.708050,2.913100&z=15&output=embed"></iframe>
+    </div>
+    <div class="other-data">
+      <p><strong>Flight Time:</strong> <span id="flight-time">120 seconds</span></p>
+      <p><strong>Bitrate:</strong> <span id="bitrate">256 kbps</span></p>
+      <p><strong>CO2 Levels:</strong> <span id="co2">400 ppm</span></p>
+      <p><strong>GPL Value:</strong> <span id="gpl">3.8</span></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
